@@ -1,0 +1,82 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --clr-neutralbtn: plum;
+    --clr-neutral: purple;
+    --clr-correct: green;
+    --clr-wrong: red;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-neutral);
+}
+
+body.correct {
+    background: var(--clr-correct);
+}
+
+body.wrong {
+    background: var(--clr-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    border: 3px solid var(--clr-neutral);
+    background-color: var(--clr-neutralbtn);
+    padding: 5px 10px;
+    color: black;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: whitesmoke;
+}
+
+.btn.correct {
+    background-color: var(--clr-correct);
+}
+
+.btn.wrong {
+    background-color: var(--clr-wrong);
+}
+
+.start-btn, .next-btn {
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 10px 20px;
+}
+
+.controler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
